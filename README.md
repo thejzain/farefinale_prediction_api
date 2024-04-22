@@ -22,7 +22,7 @@ This Flask API predicts the price of a food item based on its demand and season.
     - Run the following command:
 
     ```bash
-    python food_price_prediction.py
+    python farefinale.py
     ```
 
     - This will start the API on `http://localhost:5000/predict`.
