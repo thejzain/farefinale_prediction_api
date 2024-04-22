@@ -1,0 +1,85 @@
+Food Type,Expiration Date,Demand,Season,Price
+Chips,2024-04-15,High,Summer,2.50
+Chips,2024-04-15,High,Spring,2.50
+Chips,2024-04-15,High,Autumn,2.50
+Chips,2024-04-15,High,Winter,2.50
+Chips,2024-04-15,Medium,Summer,2.50
+Chips,2024-04-15,Medium,Spring,2.50
+Chips,2024-04-15,Medium,Autumn,2.50
+Chips,2024-04-15,Medium,Winter,2.50
+Chips,2024-04-15,Low,Summer,2.50
+Chips,2024-04-15,Low,Spring,2.50
+Chips,2024-04-15,Low,Autumn,2.50
+Chips,2024-04-15,Low,Winter,2.50
+Cereal,2024-04-12,High,Summer,1.80
+Cereal,2024-04-12,High,Spring,1.80
+Cereal,2024-04-12,High,Autumn,1.80
+Cereal,2024-04-12,High,Winter,1.80
+Cereal,2024-04-12,Medium,Summer,1.80
+Cereal,2024-04-12,Medium,Spring,1.80
+Cereal,2024-04-12,Medium,Autumn,1.80
+Cereal,2024-04-12,Medium,Winter,1.80
+Cereal,2024-04-12,Low,Summer,1.80
+Cereal,2024-04-12,Low,Spring,1.80
+Cereal,2024-04-12,Low,Autumn,1.80
+Cereal,2024-04-12,Low,Winter,1.80
+Granola Bars,2024-04-14,High,Summer,2.20
+Granola Bars,2024-04-14,High,Spring,2.20
+Granola Bars,2024-04-14,High,Autumn,2.20
+Granola Bars,2024-04-14,High,Winter,2.20
+Granola Bars,2024-04-14,Medium,Summer,2.20
+Granola Bars,2024-04-14,Medium,Spring,2.20
+Granola Bars,2024-04-14,Medium,Autumn,2.20
+Granola Bars,2024-04-14,Medium,Winter,2.20
+Granola Bars,2024-04-14,Low,Summer,2.20
+Granola Bars,2024-04-14,Low,Spring,2.20
+Granola Bars,2024-04-14,Low,Autumn,2.20
+Granola Bars,2024-04-14,Low,Winter,2.20
+Instant Noodles,2024-04-10,High,Summer,2.00
+Instant Noodles,2024-04-10,High,Spring,2.00
+Instant Noodles,2024-04-10,High,Autumn,2.00
+Instant Noodles,2024-04-10,High,Winter,2.00
+Instant Noodles,2024-04-10,Medium,Summer,2.00
+Instant Noodles,2024-04-10,Medium,Spring,2.00
+Instant Noodles,2024-04-10,Medium,Autumn,2.00
+Instant Noodles,2024-04-10,Medium,Winter,2.00
+Instant Noodles,2024-04-10,Low,Summer,2.00
+Instant Noodles,2024-04-10,Low,Spring,2.00
+Instant Noodles,2024-04-10,Low,Autumn,2.00
+Instant Noodles,2024-04-10,Low,Winter,2.00
+Rice,2024-04-09,High,Summer,1.50
+Rice,2024-04-09,High,Spring,1.50
+Rice,2024-04-09,High,Autumn,1.50
+Rice,2024-04-09,High,Winter,1.50
+Rice,2024-04-09,Medium,Summer,1.50
+Rice,2024-04-09,Medium,Spring,1.50
+Rice,2024-04-09,Medium,Autumn,1.50
+Rice,2024-04-09,Medium,Winter,1.50
+Rice,2024-04-09,Low,Summer,1.50
+Rice,2024-04-09,Low,Spring,1.50
+Rice,2024-04-09,Low,Autumn,1.50
+Rice,2024-04-09,Low,Winter,1.50
+Crackers,2024-04-08,High,Summer,3.00
+Crackers,2024-04-08,High,Spring,3.00
+Crackers,2024-04-08,High,Autumn,3.00
+Crackers,2024-04-08,High,Winter,3.00
+Crackers,2024-04-08,Medium,Summer,3.00
+Crackers,2024-04-08,Medium,Spring,3.00
+Crackers,2024-04-08,Medium,Autumn,3.00
+Crackers,2024-04-08,Medium,Winter,3.00
+Crackers,2024-04-08,Low,Summer,3.00
+Crackers,2024-04-08,Low,Spring,3.00
+Crackers,2024-04-08,Low,Autumn,3.00
+Crackers,2024-04-08,Low,Winter,3.00
+Popcorn,2024-04-07,High,Summer,2.20
+Popcorn,2024-04-07,High,Spring,2.20
+Popcorn,2024-04-07,High,Autumn,2.20
+Popcorn,2024-04-07,High,Winter,2.20
+Popcorn,2024-04-07,Medium,Summer,2.20
+Popcorn,2024-04-07,Medium,Spring,2.20
+Popcorn,2024-04-07,Medium,Autumn,2.20
+Popcorn,2024-04-07,Medium,Winter,2.20
+Popcorn,2024-04-07,Low,Summer,2.20
+Popcorn,2024-04-07,Low,Spring,2.20
+Popcorn,2024-04-07,Low,Autumn,2.20
+Popcorn,2024-04-07,Low,Winter,2.20
