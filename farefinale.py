@@ -1,15 +1,31 @@
-# -*- coding: utf-8 -*-
 from flask import Flask, request, jsonify
 import pandas as pd
+import firebase_admin
+from firebase_admin import credentials, firestore
 from sklearn.ensemble import RandomForestRegressor
 
 app = Flask(__name__)
 
-# Load the dataset
-data = pd.read_csv("your_dataset.csv")
+# Initialize Firebase Admin SDK with your credentials
+cred = credentials.Certificate("admin.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
 
-# Convert 'Expiration Date' to datetime
-data["Expiration Date"] = pd.to_datetime(data["Expiration Date"])
+
+# Function to fetch data from Firebase
+def fetch_data_from_firebase(collection_name):
+    docs = db.collection(collection_name).stream()
+    data = []
+    for doc in docs:
+        data.append(doc.to_dict())
+    return pd.DataFrame(data)
+
+
+# Load the dataset from Firebase
+data = fetch_data_from_firebase("test_ml")
+
+# Convert 'Expiration Date' to datetime (if applicable)
+# data["Expiration Date"] = pd.to_datetime(data["Expiration Date"])
 
 
 # Train model for a specific product
@@ -83,19 +99,36 @@ def predict_price(trained_model, demand, season):
     return adjusted_price
 
 
+# Function to save predicted price to Firebase
+def save_predicted_price_to_firebase(product_name, predicted_price):
+    doc_ref = db.collection("predicted_prices").document(product_name)
+    doc_ref.set({"predicted_price": predicted_price})
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     content = request.json
-    product_name = content.get("product_name")
-    demand = content.get("demand")
-    season = content.get("season")
-    trained_model_for_product = train_model_for_product(product_name)
+    predictions = []
 
-    if trained_model_for_product:
-        predicted_price = predict_price(trained_model_for_product, demand, season)
-        return jsonify({"predicted_price": predicted_price}), 200
-    else:
-        return jsonify({"error": "Model not trained for product " + product_name}), 400
+    for item in content["items"]:
+        product_name = item.get("product_name")
+        demand = item.get("demand")
+        season = item.get("season")
+        trained_model_for_product = train_model_for_product(product_name)
+
+        if trained_model_for_product:
+            predicted_price = predict_price(trained_model_for_product, demand, season)
+            # Save predicted price to Firebase
+            save_predicted_price_to_firebase(product_name, predicted_price)
+            predictions.append(
+                {"product_name": product_name, "predicted_price": predicted_price}
+            )
+        else:
+            predictions.append(
+                {"product_name": product_name, "error": "Model not trained for product"}
+            )
+
+    return jsonify({"predictions": predictions}), 200
 
 
 if __name__ == "__main__":
