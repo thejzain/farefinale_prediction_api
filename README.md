@@ -66,7 +66,7 @@ This Flask API predicts the price of a food item based on its demand and season.
 * You can modify the demand and season multipliers in the `predict_price` function to customize the price adjustment logic.
 
 ### Example request and Response
-
+```bash
 ➜  ~ curl -X POST http://localhost:5000/predict \
      -H "Content-Type: application/json" \
      -d '{
@@ -76,8 +76,8 @@ This Flask API predicts the price of a food item based on its demand and season.
                 {"product_name": "Popcorn", "demand": "Low", "season": "Spring"}
             ]
          }'
-
-{
+```
+```json {
   "predictions": [
     {
       "predicted_price": 2.1375,
@@ -93,3 +93,4 @@ This Flask API predicts the price of a food item based on its demand and season.
     }
   ]
 }
+```
